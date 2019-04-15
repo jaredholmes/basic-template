@@ -1,0 +1,70 @@
+// Headings
+h1, h2, h3, h4, h5, h6
+    margin-top s1
+    margin-bottom s1
+
+p+ h1, p + h2, p + h3, p+ h4, p + h5, p + h6
+    margin-top s3
+
+* + p, * + ul
+    margin-top s1
+
+// Container
+.container
+    padding-left s1
+    padding-right s1
+    margin-left auto
+    margin-right auto
+
+    max-width 100%
+
+    @media sm-up
+        max-width 540px
+
+    @media md-up
+        max-width 720px
+
+    @media lg-up
+        max-width 960px
+
+    @media xl-up
+        max-width 1140px
+
+// Flexbox classes
+.flex
+    display flex
+    flex-flow wrap
+    flex-direction row
+
+.flex.align-center
+    align-items center
+
+.flex.justify-between
+    justify-content space-between
+
+.flex.nowrap
+    flex-flow nowrap
+
+.flex.dir-col
+    flex-direction column
+    
+// Text align
+.text-align-center
+    text-align center
+
+.text-align-left
+    text-align left
+
+.text-align-right
+    text-align right
+
+// Image container
+.img-container
+    overflow hidden
+
+    > img
+        max-width 100%
+
+// View
+.view
+    margin-bottom s6

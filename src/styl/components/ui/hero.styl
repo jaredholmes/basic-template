@@ -1,0 +1,29 @@
+.ui-hero
+  width 100%
+  margin-bottom s4
+  position relative
+
+  > .hero-content
+    margin s7 s3
+    max-width: 33%
+    position absolute
+    top 0
+    left 0
+
+    @media md-down
+      margin s4 s2
+      max-width 67%
+
+    @media sm-down
+      max-width: 100%
+
+  > .img-container
+      height 100%
+      max-width 100%
+      
+      @media md-down
+        min-height 67vh
+
+      @media sm-down
+        > img
+          display: none

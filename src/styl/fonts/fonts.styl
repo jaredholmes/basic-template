@@ -1,0 +1,59 @@
+// Base font size
+font-size = 16px
+
+// Font weights
+font-weights = {
+    light: 300
+    regular: 400
+    semibold: 500
+    bold: 600
+}
+
+// Font weights classes
+for name, weight in font-weights
+    .fw-{name}
+        font-weight weight
+
+@font-face
+    font-family: WorkSans
+    src: url("~@/assets/fonts/WorkSans/WorkSans-Light.otf") font-weight-light
+    src: url("~@/assets/fonts/WorkSans/WorkSans-Regular.otf") font-weight-regular
+    src: url("~@/assets/fonts/WorkSans/WorkSans-Medium.otf") font-weight-medium
+    src: url("~@/assets/fonts/WorkSans/WorkSans-Bold.otf") font-weight-bold
+    font-style: normal
+
+body
+    font-size font-size
+    font-family: "Work Sans"
+    font-weight font-weights["light"]
+
+// Heading font sizes
+h1
+    font-size 2.5rem
+
+h2
+    font-size 2rem
+
+h3
+    font-size 1.5rem
+
+h4
+    font-size 1.25rem
+
+h5
+    font-size 1rem
+
+h6
+    font-size .75rem
+
+// Heading font weights
+h1, h2, h3, h4, h5, h6
+    font-weight font-weights["semibold"]
+
+// Links
+a, a:visited, a:active
+    text-decoration none
+    color inherit
+
+a:hover
+    text-decoration underline

@@ -1,0 +1,31 @@
+colours = {
+    // Named Colours
+    white: #ffffff
+    black: #000000
+
+    // General Colours
+    // primary: #9097fd
+    primary: #da694b
+    // secondary: #c4c7ce
+    secondary: #f6eee3
+
+    // Text Colours
+    text-primary: black
+    // text-secondary: #415291
+    text-secondary: #413043
+}
+
+// Colour classes
+for name, colour in colours
+    .c-{name}
+        color colour
+    .bc-{name}
+        background-color colour
+
+// Element Colours
+body
+    background-color white
+    color colours["text-primary"]
+
+a, a:hover, a:visited, a:active
+    color colours["text-secondary"]

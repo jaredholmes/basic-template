@@ -1,0 +1,64 @@
+.ui-navbar, .ui-navbar *
+  z-index 1
+
+.ui-navbar
+  padding s-2 s1
+  flex-flow wrap
+  position sticky
+  top 0
+  left 0
+  right 0
+  background-color rgba(255, 255, 255, .7)
+
+  @media md-down
+    position static
+
+  a:hover
+    text-decoration none
+
+  > .navbar-heading
+    align-items center
+
+    > img
+      max-height 2rem
+      margin-right s-2
+
+    > h1
+      font-size 1.5rem
+      margin 0
+
+      > a
+        color colours["text-primary"]
+
+  > .navbar-nav
+    @media md-down
+      transform translateX(100%)
+      flex-basis 100%
+      flex-direction column
+      position absolute
+      top 0
+      bottom 0
+      right 0
+      left 0
+      padding s1
+      transition transform 350ms
+
+    > .nav-link + .nav-link
+      @media md-up
+        padding-left s1
+
+    > .nav-link
+      transition color .5s
+      
+      @media md-down
+        padding-top s1
+
+    > .nav-link:hover
+      color colours["text-primary"]
+
+  > .navbar-nav.active
+    transform translateX(0)
+
+  > .navbar-nav-toggle, .navbar-nav-close
+    @media md-up
+      display none
